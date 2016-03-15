@@ -16,7 +16,6 @@ public class ResultSetTableModel extends AbstractTableModel {
     public ResultSetTableModel(String query) throws SQLException
     {
         connection = DBUtilities.getConnection();
-
         statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         resultSet = statement.executeQuery(query);
         metaData = resultSet.getMetaData();

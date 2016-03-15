@@ -6,15 +6,17 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Employees {
 
-    public static void main(String[] args) {
-        try {
-            // Set System L&F
+    public static void main(String[] args)
+    {
+        try
+        {
             UIManager.setLookAndFeel(
                     UIManager.getSystemLookAndFeelClassName());
-        } catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+        }
+        catch (UnsupportedLookAndFeelException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             System.out.println(ex.getMessage());
         }
-        FORMEmployees sForm = new FORMEmployees(null, false);
+        EmployeesWindow sForm = new EmployeesWindow(null, false);
         sForm.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         sForm.pack();
         sForm.setLocationRelativeTo(null);
